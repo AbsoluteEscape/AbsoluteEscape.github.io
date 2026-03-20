@@ -5,7 +5,6 @@ The goal of this project is to train a control policy for a PandaOmron mobile ma
 
 ![demo_playback](https://github.com/user-attachments/assets/a7038ea2-af15-401b-a5f8-d1ebe27aec85)
 
-<img src="https://github.com/user-attachments/assets/a7038ea2-af15-401b-a5f8-d1ebe27aec85" alt="demo_playback" width="100%">
 
 ---
 
@@ -37,8 +36,6 @@ To address the "reachability" issue, I introduced targeted handle features and a
 
 ![bandicam 2026-03-20 10-51-37-632](https://github.com/user-attachments/assets/13ced81c-22bc-4169-a8c5-af7349ba28f7)
 
-<img src="https://github.com/user-attachments/assets/13ced81c-22bc-4169-a8c5-af7349ba28f7" alt="MLP failure loop" width="100%">
-
 The MLP policy (without augmentation) yielded results exactly identical to the above.
 
 ---
@@ -55,8 +52,6 @@ To overcome the multimodality issues of MSE-based regression, I implemented a Di
 * **Evaluation (`10_eval_diffusion.py`)**: Success rate remained at **0%**.
 
 ![bandicam 2026-03-20 11-03-04-039](https://github.com/user-attachments/assets/81cc5e7c-09d5-41f4-8e38-d926e0e1a4e2)
-
-<img src="https://github.com/user-attachments/assets/81cc5e7c-09d5-41f4-8e38-d926e0e1a4e2" alt="Diffusion failure trajectory" width="100%">
 
 The robot **appeared to show an intent** to move toward the cabinet handle during the very early stages of the rollout. The Diffusion policy (with DAgger) yielded results exactly identical to the above.
 
