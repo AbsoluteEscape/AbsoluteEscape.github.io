@@ -71,8 +71,11 @@ I attempted to refine the Diffusion Policy using `12_diffusion_DAgger.py`, but e
 
 | Experiment Phase | Policy Model | Observed Behavior | Primary Failure Reason |
 | :--- | :--- | :--- | :--- |
-| **Step 1: Baseline** | MLP | Erratic spinning/twisting | Compounding errors in simple BC. |
-| **Step 2: Augmented** | MLP | Erratic spinning/twisting | Compounding errors in simple BC. |
-| **Step 3: Diffusion** | **1D U-Net** | **Initial move toward handle** | **Trajectory Drift, Hardware lag & DAgger constraints.** |
+| **Step 1: Baseline** | MLP | Erratic spinning/twisting | Compounding errors in simple BC. MSE & Multimodality|
+| **Step 2: Augmented** | MLP | Erratic spinning/twisting | Compounding errors in simple BC. MSE & Multimodality|
+| **Step 3: Diffusion** | **1D U-Net** | **Initial move toward handle** | **Trajectory Drift, Compounding errors, Hardware lag & DAgger constraints.** |
 
 **Conclusion**: The Diffusion Policy showed the most promise by initiating a move toward the target. However, achieving a non-zero success rate was prevented by severe hardware lag and the limitations of the "Permanent Human Override" strategy, which likely degraded the effectiveness of the DAgger training.
+
+
+Demo video: https://www.youtube.com/watch?v=UXVVj-FhfWs
