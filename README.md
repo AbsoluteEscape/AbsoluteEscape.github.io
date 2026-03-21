@@ -67,6 +67,19 @@ I attempted to refine the Diffusion Policy using `12_diffusion_DAgger.py`, but e
 
 ---
 
+## 5. Overfitting and Validation Check
+I attempted to replicate the logic from the official repo for the Diffusion model with 1D Unet, with additional statistics in order to have a check against a validation dataset.
+
+* **Results**: The validation loss declined early in the training.
+
+![~16M Params with 1e-6 Weight-Decay](https://github.com/AbsoluteEscape/CS-188-project/blob/5f8c33cf95f79cd249f056c46ebf6103f1b6caad/readmePics/Training%20Loss%20(train)%20and%20Validation%20Loss%20(val)%20~16M%20Params%20Weight-Decay%201e-6.png)
+![~16M Params with 1e-2 Weight-Decay](https://github.com/AbsoluteEscape/CS-188-project/blob/5f8c33cf95f79cd249f056c46ebf6103f1b6caad/readmePics/Train%20Loss%20and%20Val%20Loss%20~16M%20Params%2C%20Weight-Decay%201e-2.png)
+![~3M Params with 1e-2 Weight-Decay](https://github.com/AbsoluteEscape/CS-188-project/blob/5f8c33cf95f79cd249f056c46ebf6103f1b6caad/readmePics/Train%20Loss%20and%20Validation%20Loss%20~3M%20Params%20Weight-Decay%201e-2.png)
+
+Note that this model is eh_09. In order to run evaluation, use the eh_07 and eh_08 scripts. Warning that eh_07 is set to save a checkpoint at every epoch.
+
+---
+
 ## Final Analysis Summary
 
 | Experiment Phase | Policy Model | Observed Behavior | Primary Failure Reason |
